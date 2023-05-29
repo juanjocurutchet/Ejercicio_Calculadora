@@ -1,0 +1,8 @@
+Ejercicio obligatorio. 
+Deadline: 30 de mayo. 
+Consigna: crear una calculadora. 
+Requisitos: HTML y CSS "decentes". 
+Operaciones básicas con dos números (suma, resta, división, multiplicación). 
+El método calcular será una función de orden superior que reciba un callback. 
+Este callback determinará la operación de acuerdo a lo que haya elegido el usuario.
+La lógica se trabajó en clase. Solamente les restaría la parte de frontend.
