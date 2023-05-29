@@ -13,17 +13,33 @@ body {
     width: 300px;
     margin: auto;
     margin-top: 50px;
+    
+    
+}
+
+.nombre {
+    display: grid;
+    grid-column: span 4;
+    height: max-content;
+    text-align: center;
+    font-size: 1.2em; 
+    font-weight: lighter;        
+}
+
+p {
+    color: #2f2d2d;
 }
 
 .calculator {
     display: grid;
     grid-template-columns: repeat(4, 75px);
-    grid-template-rows: 160px repeat(5, 75px);
+    grid-template-rows: 75px repeat(6, 75px);
     background-color: rgb(98, 98, 98);
     padding: 15px;
     border-radius: 30px;
-    box-shadow: 15px 10px 0px 5px #2f2d2d;
+    box-shadow: 10px 10px 0px 5px #2f2d2d;
 }
+
 
 button{
     cursor: pointer;
@@ -31,16 +47,21 @@ button{
     padding: 0;
     border-radius: 30px;
     font-size: 1.5em;
-    border: solid 1px rgb(236, 232, 232);
+    border: solid 1px #ece8e8;
     background-color:  #434242;
     box-shadow: 5px 5px 10px -3px rgb(38, 38, 38), -5px -5px 15px 3px rgb(78, 90, 101);
 }
 
-#botonIgual{
+#botonIgual,
+#botonClear{
     background-color: darkred;
 }
 
 #botonIgual:hover{
+    background-color: orangered;
+}
+
+#botonClear:hover {
     background-color: orangered;
 }
 
@@ -60,11 +81,14 @@ button:focus{
     grid-column: span 2;
 }
 
+
+
 #resultado {
     grid-column: 1/-1;
     padding: 15px;
     display: flex;
-    margin: 10px 10px 20px;
+    
+    margin: 0px 10px 10px 10px;
     flex-direction: column;
     align-items: flex-end;
     background-color: lightsteelblue;

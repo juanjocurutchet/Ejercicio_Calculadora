@@ -36,7 +36,7 @@ botonClear.addEventListener('click', function () {
 })
 // Agrego evento al botonBorrarUno...
 botonBorrarUno.addEventListener('click', function () {
-    clearOne()
+    clearOne();
 })
 
 // Creo las funciones ...
@@ -50,9 +50,13 @@ function selecOperacion(op) {
     operacionActual = '';
 
 }
-function agregarNumero(num) {    
-    //transformo a string porque el input trabaja con string..
-    operacionActual = operacionActual.toString() + num.toString();
+function agregarNumero(num) {
+    if (display.value.includes('.') && num === '.') {
+        return
+    }else {
+        operacionActual = operacionActual.toString() + num.toString();
+    }    
+
     actualizarDisplay();
 }
 
@@ -68,7 +72,8 @@ function clear() {
 
 function clearOne() {
     display.value = display.value.slice(0, -1);
-} 
+    operacionActual = display.value    
+}
 
 function calcular() {
     let calculo;
